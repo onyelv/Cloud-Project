@@ -22,7 +22,7 @@ Load balancing ensures that the application will be highly redundant, in additio
 
 What aspect of security do load balancers protect? (Availability) What is the advantage of a jump box ( Allows for more security by giving access to the network while still keeping internal machines private )
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the ______ and system _____.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the docker and system logs.
 
 What does Filebeat watch for?  changes to the system logs
 What does Metricbeat record?
@@ -51,23 +51,23 @@ ELKServer Yes     10.1.0.4
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 
 What is the main advantage of automating configuration with Ansible?
-Run templates on multiple machines simultanuoesly
+Run templates on multiple machines simultaneously
 The playbook implements the following tasks:
+Gathering Facts ,Install docker.io, Install pip3, Install Docker python module, Use more memory, download and launch a docker elk container
 
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
-...
-...
+ansible-playbook /etc/ansible/elk.yml;nano elk.yml; and docker start elk
 
-
-Target Machines & Beats
+#### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
 DVWA1 and DVWA2
 
 List the IP addresses of the machines you are monitoring
 10.0.0.7 and 10.0.0.8
 
-Specify which Beats you successfully installed
+#### Specify which Beats you successfully installed
 Filebeats and Metricbeats
+
 These Beats allow us to collect the following information from each machine:
 system logs and Docker logs
 
