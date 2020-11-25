@@ -56,13 +56,13 @@ The playbook implements the following tasks:
 Gathering Facts ,Install docker.io, Install pip3, Install Docker python module, Use more memory, download and launch a docker elk container
 
 In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc. (Please see install_elk.yml file in the Ansible folder)
-Configure Elk VM with Docker
-Install docker.io
-Install pip3
-Install Docker python module
-Increase virtual memory
-Use more memory
-download and launch a docker elk container
+Configure Elk VM with Docker,
+Install docker.io,
+Install pip3,
+Install Docker python module,
+Increase virtual memory,
+Use more memory,
+download and launch a docker elk container.
 
 #### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
