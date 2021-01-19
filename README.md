@@ -4,6 +4,15 @@
 ### Network Topology:
 ![alt text](elk-stack-diagram.png "elk-diagram")
 
+From the workstation we SSH an HTTP request from the internet then a firewall is placed on the security group on our virtual environment network consisting of a resource group that holds the entire deployment followed by a virtual network with its own IP address and a virtual subnet with its own IP address. 
+
+The virtual subnet holds our security group firewall as well as the load balancer incase there is tomuch traffic so that it is scaled well by equality distributing to web servers 1,2 and 3.
+
+From the initial firewall we connect to the Jump-Box through SSH. On the Jump-Box we use Ansible through SSH to configure the three web servers, 1,2 and 3 on the DVWA containers. Ansible automatically configures the web-servers to deploy the 3 web servers which collects logs.
+
+We set-up an ELK-Stack deployment housing the web-pages in a separate box and with its own virtual environment for security reasons housing web pages because monitoring those pages we run metribeats and filebeats which allows us to collect information from each machine’s system logs and docker logs.
+
+
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. 
 
 ##### This document contains the following details:
